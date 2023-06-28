@@ -1,5 +1,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-# Sampo-UI
+
+# Faceted search application for searching relations in Getty ULAN knowledge graph
+
+# Based on Sampo-UI
 
 A framework for building user interfaces for semantic portals. 
 

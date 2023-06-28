@@ -1,22 +1,11 @@
 {
-    "portalID": "sampo",
+    "portalID": "ulan",
     "rootUrl": "",
     "perspectives": {
         "searchPerspectives": [
-            "perspective1",
-            "perspective2",
-            "perspective3",
-            "perspective4",
-            "fullTextSearch"
+            "directed"
         ],
         "onlyInstancePages": [
-            "manuscripts",
-            "collections",
-            "works",
-            "expressions",
-            "events",
-            "actors",
-            "places"
         ]
     },
     "localeConfig": {
@@ -27,11 +16,6 @@
                 "id": "en",
                 "label": "English",
                 "filename": "localeEN.json"
-            },
-            {
-                "id": "fi",
-                "label": "English",
-                "filename": "localeFI.json"
             }
         ]
     },
