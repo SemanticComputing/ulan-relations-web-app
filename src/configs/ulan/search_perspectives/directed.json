@@ -1,8 +1,8 @@
 {
     "id": "directed",
     "endpoint": {
-        "url": "http://localhost:3070/ds",
-        "useAuth": false,
+        "url": "http://ldf.fi/ulan-relations/sparql",
+        "useAuth": true,
         "prefixesFile": "SparqlQueriesPrefixes.js"
     },
     "sparqlQueriesFile": "SparqlQueriesPerspective1.js",
