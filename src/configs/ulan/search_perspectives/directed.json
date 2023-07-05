@@ -150,10 +150,11 @@
             "facetType": "list",
             "filterType": "uriFilter",
             "predicate": "rel:relationType",
+            "facetLabelPredicate": "rdfs:label",
             "searchField": true,
             "sortButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:relationType/skos:prefLabel",
+            "sortByPredicate": "rel:relationType/rdfs:label",
             "sortDirection": "desc"
         },
         "personAName": {
@@ -166,29 +167,32 @@
             "searchField": true,
             "sortButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:relationSubject",
+            "sortByPredicate": "rel:relationSubject/rdfs:label",
             "sortDirection": "desc"
         },
         "personAGender": {
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "rel:gender",
+            "predicate": "rel:relationSubject/schema:gender",
             "searchField": true,
             "sortButton": true,
+            "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:gender/skos:prefLabel",
+            "sortByPredicate": "rel:relationSubject/schema:gender/rdfs:label",
             "sortDirection": "desc"
         },
         "personANationality": {
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "rel:nationality",
+            "literal": true,
+            "predicate": "rel:relationSubject/schema:nationality",
             "searchField": true,
             "sortButton": true,
+            "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:nationality/skos:prefLabel",
+            "sortByPredicate": "rel:relationSubject/schema:nationality",
             "sortDirection": "desc"
         },
         "personBName": {
@@ -206,22 +210,25 @@
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "rel:gender",
+            "predicate": "rel:relationObject/schema:gender",
             "searchField": true,
             "sortButton": true,
+            "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:gender/skos:prefLabel",
+            "sortByPredicate": "rel:relationObject/schema:gender/skos:prefLabel",
             "sortDirection": "desc"
         },
         "personBNationality": {
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "rel:nationality",
+            "literal": true,
+            "predicate": "rel:relationObject/schema:nationality",
             "searchField": true,
             "sortButton": true,
+            "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:nationality/skos:prefLabel",
+            "sortByPredicate": "rel:relationObject/schema:nationality",
             "sortDirection": "desc"
         }
     }
