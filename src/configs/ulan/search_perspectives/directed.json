@@ -150,6 +150,15 @@
             "sortByPredicate": "rel:relationSubject/schema:nationality",
             "sortDirection": "desc"
         },
+        "personABirthYear": {
+            "containerClass": "five",
+            "facetType": "integer",
+            "filterType": "integerFilterRange",
+            "predicate": "rel:relationSubject/schema:birthDate",
+            "sortByPredicate": "rel:relationSubject/schema:birthDate",
+            "typecasting": "BIND(xsd:integer(?value) as ?valueAsInteger)",
+            "unit": "year"
+        },
         "personBName": {
             "containerClass": "ten",
             "facetType": "list",
@@ -185,6 +194,15 @@
             "sortBy": "instanceCount",
             "sortByPredicate": "rel:relationObject/schema:nationality",
             "sortDirection": "desc"
+        },
+        "personBBirthYear": {
+            "containerClass": "five",
+            "facetType": "integer",
+            "filterType": "integerFilterRange",
+            "predicate": "rel:relationObject/schema:birthDate",
+            "sortByPredicate": "rel:relationObejct/schema:birthDate",
+            "typecasting": "BIND(xsd:integer(?value) as ?valueAsInteger)",
+            "unit": "year"
         }
     }
 }

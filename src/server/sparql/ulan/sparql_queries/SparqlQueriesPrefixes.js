@@ -23,5 +23,6 @@ export const prefixes = `
   PREFIX gn: <http://www.geonames.org/ontology#>
   PREFIX rel: <http://ldf.fi/schema/relations/>
   PREFIX schema: <http://schema.org/>
+
   
 `
