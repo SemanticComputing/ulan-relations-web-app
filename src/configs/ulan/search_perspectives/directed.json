@@ -24,7 +24,7 @@
                 "tabPath": "table",
                 "tabIcon": "CalendarViewDay",
                 "propertiesQueryBlock": "workProperties",
-                "pagesize": 10,
+                "pagesize": 25,
                 "sortBy": null,
                 "sortDirection": null
             },
@@ -46,18 +46,6 @@
                     }
                 }
             }
-        },
-        "export": {
-            "tabID": 1,
-            "component": "Export",
-            "tabPath": "export",
-            "tabIcon": "CloudDownload",
-            "resultClass": "perspective1",
-            "facetClass": "perspective1"
-        },
-        "knowledgeGraphMetadata": {
-            "sparqlQuery": "knowledgeGraphMetadataQuery",
-            "resultMapper": "makeObjectList"
         }
     },
     "properties": [
@@ -73,7 +61,7 @@
         {
             "id": "prefLabel",
             "valueType": "object",
-            "makeLink": true,
+            "makeLink": false,
             "externalLink": false,
             "sortValues": true,
             "numberedList": false,

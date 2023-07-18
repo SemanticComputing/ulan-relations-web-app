@@ -12,15 +12,15 @@ export const workProperties = `
     UNION
     {
       ?id rel:relationSubject ?personAName__id .
-      ?personAName__id rdfs:label ?personANAme__prefLabel .
-      BIND (?personAName__id AS ?personAName__dataProviderUlr )
+      ?personAName__id rdfs:label ?personAName__prefLabel .
+      BIND (?personAName__id AS ?personAName__dataProviderUrl )
 
     }
     UNION
     {
       ?id rel:relationObject ?personBName__id .
-      ?personBName__id rdfs:label ?personBNAme__prefLabel .
-      BIND (?personBName__id AS ?personBName__dataProviderUlr )
+      ?personBName__id rdfs:label ?personBName__prefLabel .
+      BIND (?personBName__id AS ?personBName__dataProviderUrl )
 
     }
 `

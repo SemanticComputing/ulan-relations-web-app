@@ -7,12 +7,12 @@
   "appTitle": {
     "short": "ULANSampo",
     "mobile": "S-UI",
-    "long": "&nbsp; &nbsp; Sampo-UI &nbsp; &nbsp;",
+    "long": "&nbsp; &nbsp; ULAN Relations &nbsp; &nbsp;",
     "subheading": "Searching for relations in Getty ULAN Knowledge Graph"
   },
   "appDescription1": "Sampo is a web service for searching and studying place names. The search results can be viewed as a table, on maps, and as statistical distributions. Historical and current background maps are provided.",
   "appDescription2": "Start by choosing source dataset(s) and input a place name on the search field. Alternatively you can search by area.",
-  "selectPerspective": "Select a perspective to search and browse the knowledge graph:",
+  "selectPerspective": "Search realtions in ihe Union List of Artist Names (ULAN) data:",
   "mainPageImageLicence": "Images used under license from Shutterstock.com",
   "backendErrorText": "One of the backend services is not available at the moment. Please try again later.",
   "infoHeader": {
@@ -306,7 +306,7 @@
     "directed": {
       "label": "Relations",
       "facetResultsType": "relations",
-      "shortDescription": "Perspective 1 description",
+      "shortDescription": "Directed relations",
       "longDescription": "<p class=\"MuiTypography-root MuiTypography-body1 MuiTypography-paragraph\"> Use this perspective to access data related to Works. The MMM data model follows the <a href='https://www.ifla.org/publications/node/11240' target='_blank' rel='noopener noreferrer'>FRBRoo</a> definition of a work, which refers to “distinct concepts or combinations of concepts identified in artistic and intellectual expressions.” Works contain title and author information. If two or more source datasets include the same Work and this has been verified, the information from the source datasets has been merged into one Work. See <a href=\"/instructions\">instructions</a> for using the filters. The result view can be selected using the tabs: </p> <ul class=\"MuiTypography-root MuiTypography-body1\"> <li> <strong>TABLE</STRONG> view gives you a list of specific works, and the manuscripts and manuscript collections in which they can be found. </li> <li> <strong>EXPORT</strong> the SPARQL query used to generate the result table view into YASGUI query editor. </li> </ul>",
       "instancePage": {
         "label": "Work",
@@ -327,11 +327,11 @@
           "description": ""
         },
         "personAGender": {
-          "label": "Person A Gender",
+          "label": "Person A gender",
           "description": ""
         },
         "personANationality": {
-          "label": "Person A Nationality",
+          "label": "Person A nationality",
           "description": "The expression(s) of the Work."
         },
         "personBName": {
@@ -339,11 +339,19 @@
           "description": ""
         },
         "personBGender": {
-          "label": "Person B Gender",
+          "label": "Person B gender",
           "description": ""
         },
         "personBNationality": {
-          "label": "Person B Nationality",
+          "label": "Person B nationality",
+          "description": "The expression(s) of the Work."
+        },
+        "personBBirthYear": {
+          "label": "Person B birth year",
+          "description": "The expression(s) of the Work."
+        },
+        "personABirthYear": {
+          "label": "Person A nationality",
           "description": "The expression(s) of the Work."
         },
         "relationType": {
