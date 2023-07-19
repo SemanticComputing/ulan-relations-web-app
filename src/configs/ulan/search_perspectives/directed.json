@@ -92,12 +92,13 @@
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "rel:relationType",
+            "predicate": "rel:RelationType",
             "facetLabelPredicate": "rdfs:label",
             "searchField": true,
             "sortButton": true,
+            "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:relationType/rdfs:label",
+            "sortByPredicate": "rel:RelationType/rdfs:label",
             "sortDirection": "desc"
         },
         "personAName": {
@@ -109,6 +110,7 @@
             "predicate": "rel:relationSubject",
             "searchField": true,
             "sortButton": true,
+            "pieChartButton": true,
             "sortBy": "instanceCount",
             "sortByPredicate": "rel:relationSubject/rdfs:label",
             "sortDirection": "desc"
@@ -118,6 +120,7 @@
             "facetType": "list",
             "filterType": "uriFilter",
             "predicate": "rel:relationSubject/schema:gender",
+            "facetLabelPredicate": "rdfs:label",
             "searchField": true,
             "sortButton": true,
             "pieChartButton": true,
@@ -154,6 +157,7 @@
             "predicate": "rel:relationObject",
             "searchField": true,
             "sortButton": true,
+            "pieChartButton": true,
             "sortBy": "instanceCount",
             "sortByPredicate": "rel:relationObject",
             "sortDirection": "desc"
@@ -163,6 +167,7 @@
             "facetType": "list",
             "filterType": "uriFilter",
             "predicate": "rel:relationObject/schema:gender",
+            "facetLabelPredicate": "rdfs:label",
             "searchField": true,
             "sortButton": true,
             "pieChartButton": true,
