@@ -331,7 +331,7 @@ const TopBar = props => {
                 location={props.location}
               />}
           </Box>
-          <Box
+          {/* <Box
             component='a'
             href='https://seco.cs.aalto.fi'
             target='_blank'
@@ -356,7 +356,7 @@ const TopBar = props => {
                 })}
               />
             </Button>
-          </Box>
+          </Box> */}
           <Box
             sx={theme => ({
               display: 'flex',

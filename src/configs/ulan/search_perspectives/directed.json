@@ -92,13 +92,13 @@
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "rel:RelationType",
+            "predicate": "rel:relationType",
             "facetLabelPredicate": "rdfs:label",
             "searchField": true,
             "sortButton": true,
             "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:RelationType/rdfs:label",
+            "sortByPredicate": "rel:relationType/rdfs:label",
             "sortDirection": "desc"
         },
         "personAName": {
