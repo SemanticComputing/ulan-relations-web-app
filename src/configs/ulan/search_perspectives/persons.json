@@ -1,0 +1,135 @@
+{
+    "id": "persons",
+    "endpoint": {
+        "url": "http://vocab.getty.edu/sparql.json",
+        "useAuth": true,
+        "prefixesFile": "SparqlQueriesPrefixes.js"
+    },
+    "sparqlQueriesFile": "SparqlQueriesPerspective1.js",
+    "baseURI": "http://ldf.fi/mmm",
+    "URITemplate": "<BASE_URI>/work/<LOCAL_ID>",
+    "facetClass": "gvp:PersonConcept",
+    "frontPageImage": "main_page/works-452x262.jpg",
+    "searchMode": "faceted-search",
+    "defaultActiveFacets": [
+        "prefLabel"
+    ],
+    "defaultTab": "table",
+    "defaultInstancePageTab": "table",
+    "resultClasses": {
+        "persons": {
+            "paginatedResultsConfig": {
+                "tabID": 0,
+                "component": "ResultTable",
+                "tabPath": "table",
+                "tabIcon": "CalendarViewDay",
+                "propertiesQueryBlock": "workProperties",
+                "pagesize": 25,
+                "sortBy": null,
+                "sortDirection": null
+            },
+            "instanceConfig": {
+                "propertiesQueryBlock": "workProperties",
+                "instancePageResultClasses": {
+                    "instancePageTable": {
+                        "tabID": 0,
+                        "component": "InstancePageTable",
+                        "tabPath": "table",
+                        "tabIcon": "CalendarViewDay"
+                    },
+                    "instancePageExport": {
+                        "tabID": 1,
+                        "component": "Export",
+                        "tabPath": "export",
+                        "tabIcon": "CloudDownload",
+                        "pageType": "instancePage"
+                    }
+                }
+            }
+        }
+    },
+    "properties": [
+        {
+            "id": "uri",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": true,
+            "sortValues": true,
+            "numberedList": false,
+            "onlyOnInstancePage": true
+        },
+        {
+            "id": "prefLabel",
+            "valueType": "object",
+            "makeLink": false,
+            "externalLink": false,
+            "sortValues": true,
+            "numberedList": false,
+            "minWidth": 250
+        },
+        {
+            "id": "personAName",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": true,
+            "sortValues": true,
+            "numberedList": false,
+            "minWidth": 250
+        },
+        {
+            "id": "personBName",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": true,
+            "sortValues": true,
+            "numberedList": false,
+            "minWidth": 250
+        }
+
+    ],
+    "facets": {
+        "nationality": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "predicate": "gvp:ulan1301_colleague_of",
+            "facetLabelPredicate": "rdfs:label",
+            "facetLabelFilter": "FILTER(LANG(?prefLabel_) = 'en')",
+            "searchField": true,
+            "sortButton": true,
+            "pieChartButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "gvp:ulan1301_colleague_of/rdfs:label",
+            "sortDirection": "desc"
+        },
+        "gender": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "hideUnknownValue": true,
+            "facetLabelPredicate": "rdfs:label",
+            "predicate": "schema:gender",
+            "searchField": true,
+            "sortButton": true,
+            "pieChartButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "schema:gender/rdfs:label",
+            "sortDirection": "desc"
+        },
+        "teacherOf": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "predicate": "^rel:relationSubject/rel:relationObject",
+            "facetValueFilter": "?instance ^rel:relationSubject/rel:relationType <http://ldf.fi/relations/types/teacherOf> .",
+            "facetLabelPredicate": "rdfs:label",
+            "searchField": true,
+            "hideUnknownValue": true,
+            "sortButton": true,
+            "pieChartButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "rel:relationSubject/schema:gender/rdfs:label",
+            "sortDirection": "desc"
+        }
+    }
+}
