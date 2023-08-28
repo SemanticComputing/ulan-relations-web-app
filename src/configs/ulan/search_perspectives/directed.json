@@ -1,15 +1,15 @@
 {
     "id": "directed",
     "endpoint": {
-        "url": "http://ldf.fi/ulan-relations/sparql",
+        "url": "http://vocab.getty.edu/sparql.json",
         "useAuth": true,
         "prefixesFile": "SparqlQueriesPrefixes.js"
     },
-    "sparqlQueriesFile": "SparqlQueriesPerspective1.js",
+    "sparqlQueriesFile": "SparqlQueriesPerspectives.js",
     "baseURI": "http://ldf.fi/mmm",
     "URITemplate": "<BASE_URI>/work/<LOCAL_ID>",
     "facetClass": "rel:Relation_directed_p2p",
-    "frontPageImage": "main_page/works-452x262.jpg",
+    "frontPageImage": "main_page/directed.png",
     "searchMode": "faceted-search",
     "defaultActiveFacets": [
         "prefLabel"
@@ -23,13 +23,13 @@
                 "component": "ResultTable",
                 "tabPath": "table",
                 "tabIcon": "CalendarViewDay",
-                "propertiesQueryBlock": "workProperties",
+                "propertiesQueryBlock": "directedProperties",
                 "pagesize": 25,
                 "sortBy": null,
                 "sortDirection": null
             },
             "instanceConfig": {
-                "propertiesQueryBlock": "workProperties",
+                "propertiesQueryBlock": "directedProperties",
                 "instancePageResultClasses": {
                     "instancePageTable": {
                         "tabID": 0,

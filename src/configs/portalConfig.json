@@ -4,6 +4,8 @@
     "perspectives": {
         "searchPerspectives": [
             "directed",
+            "undirected",
+            "consolidated",
             "persons"
         ],
         "onlyInstancePages": [

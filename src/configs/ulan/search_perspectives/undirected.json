@@ -1,5 +1,5 @@
 {
-    "id": "persons",
+    "id": "undirected",
     "endpoint": {
         "url": "http://vocab.getty.edu/sparql.json",
         "useAuth": true,
@@ -8,8 +8,8 @@
     "sparqlQueriesFile": "SparqlQueriesPerspectives.js",
     "baseURI": "http://ldf.fi/mmm",
     "URITemplate": "<BASE_URI>/work/<LOCAL_ID>",
-    "facetClass": "schema:Person",
-    "frontPageImage": "main_page/persons.png",
+    "facetClass": "rel:Relation_undirected",
+    "frontPageImage": "main_page/undirected.png",
     "searchMode": "faceted-search",
     "defaultActiveFacets": [
         "prefLabel"
@@ -17,19 +17,19 @@
     "defaultTab": "table",
     "defaultInstancePageTab": "table",
     "resultClasses": {
-        "persons": {
+        "undirected": {
             "paginatedResultsConfig": {
                 "tabID": 0,
                 "component": "ResultTable",
                 "tabPath": "table",
                 "tabIcon": "CalendarViewDay",
-                "propertiesQueryBlock": "personProperties",
+                "propertiesQueryBlock": "undirectedProperties",
                 "pagesize": 25,
                 "sortBy": null,
                 "sortDirection": null
             },
             "instanceConfig": {
-                "propertiesQueryBlock": "personProperties",
+                "propertiesQueryBlock": "undirectedProperties",
                 "instancePageResultClasses": {
                     "instancePageTable": {
                         "tabID": 0,
@@ -68,16 +68,7 @@
             "minWidth": 250
         },
         {
-            "id": "personAName",
-            "valueType": "object",
-            "makeLink": true,
-            "externalLink": true,
-            "sortValues": true,
-            "numberedList": false,
-            "minWidth": 250
-        },
-        {
-            "id": "personBName",
+            "id": "connectedPerson",
             "valueType": "object",
             "makeLink": true,
             "externalLink": true,
@@ -85,51 +76,69 @@
             "numberedList": false,
             "minWidth": 250
         }
-
     ],
     "facets": {
-        "nationality": {
+        "relationType": {
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "gvp:ulan1301_colleague_of",
+            "predicate": "rel:relationType",
             "facetLabelPredicate": "rdfs:label",
-            "facetLabelFilter": "FILTER(LANG(?prefLabel_) = 'en')",
             "searchField": true,
             "sortButton": true,
             "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "gvp:ulan1301_colleague_of/rdfs:label",
+            "sortByPredicate": "rel:relationType/rdfs:label",
             "sortDirection": "desc"
         },
-        "gender": {
+        "personName": {
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
             "hideUnknownValue": true,
             "facetLabelPredicate": "rdfs:label",
-            "predicate": "schema:gender",
+            "predicate": "rel:connectedEntity",
             "searchField": true,
             "sortButton": true,
             "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "schema:gender/rdfs:label",
+            "sortByPredicate": "rel:connectedEntity/rdfs:label",
             "sortDirection": "desc"
         },
-        "teacherOf": {
+        "personGender": {
             "containerClass": "ten",
             "facetType": "list",
             "filterType": "uriFilter",
-            "predicate": "^rel:relationSubject/rel:relationObject",
-            "facetValueFilter": "?instance ^rel:relationSubject/rel:relationType <http://ldf.fi/relations/types/teacherOf> .",
+            "predicate": "rel:connectedEntity/schema:gender",
             "facetLabelPredicate": "rdfs:label",
             "searchField": true,
-            "hideUnknownValue": true,
             "sortButton": true,
             "pieChartButton": true,
             "sortBy": "instanceCount",
-            "sortByPredicate": "rel:relationSubject/schema:gender/rdfs:label",
+            "sortByPredicate": "rel:connectedEntity/schema:gender/rdfs:label",
             "sortDirection": "desc"
+        },
+        "personNationality": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "literal": true,
+            "predicate": "rel:connectedEntity/schema:nationality",
+            "searchField": true,
+            "sortButton": true,
+            "pieChartButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "rel:connectedEntity/schema:nationality",
+            "sortDirection": "desc"
+        },
+        "personBirthYear": {
+            "containerClass": "five",
+            "facetType": "integer",
+            "filterType": "integerFilterRange",
+            "predicate": "rel:connectedEntity/schema:birthDate",
+            "sortByPredicate": "rel:connectedEntity/schema:birthDate",
+            "typecasting": "BIND(xsd:integer(?value) as ?valueAsInteger)",
+            "unit": "year"
         }
     }
 }
