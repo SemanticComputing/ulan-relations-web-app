@@ -24,5 +24,4 @@ export const prefixes = `
   prefix xl: <http://www.w3.org/2008/05/skos-xl#>
   PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
   PREFIX aat: <http://vocab.getty.edu/aat/>
-  
 `

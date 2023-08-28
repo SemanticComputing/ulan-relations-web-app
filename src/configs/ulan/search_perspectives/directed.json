@@ -1,7 +1,7 @@
 {
     "id": "directed",
     "endpoint": {
-        "url": "http://vocab.getty.edu/sparql.json",
+        "url": "http://ldf.fi/ulan-relations/sparql",
         "useAuth": true,
         "prefixesFile": "SparqlQueriesPrefixes.js"
     },
